@@ -11,8 +11,8 @@ var csv = require("fast-csv");
 var fs = require("fs");
 var mysql = require("mysql");
 
-var inputFilePath = "Calls_for_Service.csv";
-var outputFilePath = "Calls_for_Service_formatted.csv";
+var inputFilePath = "tmp-data/Calls_for_Service.csv";
+var outputFilePath = "tmp-data/Calls_for_Service_formatted.csv";
 var tableName = "calls_for_service";
 
 var connection = mysql.createConnection({

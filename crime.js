@@ -4,7 +4,7 @@ that includes both time and geographic attributes.  Specifcally, this module:
   (a) Downloads Victim Based Crime Data from Open Baltimore
   (b) Formats the data
   (c) Loads it into an RDBMS (in this case MemSQL)
-  
+
   NOTE: This is a very inefficent script.  It does _not_ perform bulk loading.
   Instead, each line is inserted into the database one at a time.
 */
@@ -14,7 +14,7 @@ var mysql = require("mysql");
 var request = require("request");
 
 var dataDownloadURL = "https://data.baltimorecity.gov/api/views/wsfq-mvij/rows.csv"
-var filePath = "BPD_Part_1_Victim_Based_Crime_Data.csv";
+var filePath = "tmp-data/BPD_Part_1_Victim_Based_Crime_Data.csv";
 //var filePath = "BPD_Part_1_Victim_Based_Crime_Data_small_set.csv";
 
 var connection = mysql.createConnection({
